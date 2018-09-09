@@ -1,6 +1,6 @@
 <template>
 <div class="earn-wrap">
-        <head-title :title="'入账：'"></head-title>
+        <head-title :title="'收入：'"></head-title>
         <ul class="input-warp">
             <li class="input-item input-required">
                 <calendar v-model="date_value" title="日期：" disable-future></calendar>
@@ -33,7 +33,47 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../../../assets/scss/define";
+    
+    .earn-wrap{
+        @extend %w100;
+        @extend %h100;
+        @extend %oya;
+    }
+    .input-warp{
+        padding: 0 10px;
+    }
+    .input-required{
+        @extend %pr;
+        &:before{
+            content: '*';
+            @extend %pa;
+            @extend %f16;
+            color: red;
+        }
+    }
 
+    .sure-btn{
+        @extend %db;
+        @extend %cp;
+        @extend %f16;
+        @extend %tac;
+        @extend %cfff;
+        margin: 20px 20px 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 5px;
+        background-color: #bbb;
+        box-shadow: 0 3px 0 0 #999;
+        transition: background-color .5s;
+    }
+    .earn-wrap{
+        .sure-btn.sure-active-true{
+            background-color: #FF4949;
+            box-shadow: 0 3px 0 0 red;
+        }
+    }
+    
 </style>
 
  
@@ -70,7 +110,7 @@
             }
         },
         methods: {
-            /**提交账单*/
+            
             subBill () {
                 if(!this.sum_value) {
                     this.showMsg('请填写入账金额');

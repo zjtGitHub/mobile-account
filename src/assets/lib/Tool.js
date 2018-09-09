@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/5/2.
- */
 const Tool = function (win) {
     let Tool = {};
     /**

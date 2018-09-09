@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/5/2.
- */
 import axios from 'axios';
 const Util = function (win) {
     /**

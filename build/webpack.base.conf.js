@@ -8,7 +8,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-// module.exports = {
+
 let webpackConfig = {
   entry: {
     app: './src/main.js'

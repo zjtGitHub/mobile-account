@@ -1,6 +1,6 @@
 <template>
 <div class="consumption-wrap">
-        <head-title :title="'消费：'"></head-title>
+        <head-title :title="'支出：'"></head-title>
         <ul class="input-warp">
             <li class="input-item input-required">
                 <calendar v-model="date_value" title="日期：" disable-future></calendar>
@@ -35,7 +35,11 @@
 <style lang="scss" scoped>
 @import "../../../assets/scss/define";
     
-
+    .consumption-wrap{
+        @extend %w100;
+        @extend %h100;
+        @extend %oya;
+    }
     .input-warp{
         padding: 0 10px;
     }
@@ -48,6 +52,7 @@
             color: red;
         }
     }
+    
    
     
     .sure-btn{
@@ -64,7 +69,12 @@
         box-shadow: 0 3px 0 0 #999;
         transition: background-color .5s;
     }
-    
+    .consumption-wrap{
+        .sure-btn.sure-active-true{
+            background-color: #FF4949;
+            box-shadow: 0 3px 0 0 red;
+        }
+    }
 </style>
 
  

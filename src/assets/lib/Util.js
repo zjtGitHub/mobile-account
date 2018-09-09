@@ -1,7 +1,3 @@
-/**
- * Created by Administrator on 2017/5/2.
- * 本工具让该应用的数据存储在本地LocalStorage中
- */
 import Tool from './Tool'
 const Util = function (win) {
     var Util = {};

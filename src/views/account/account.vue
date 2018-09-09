@@ -3,10 +3,10 @@
     <head-title :title="'记账：'"></head-title>
     <div class="go-btn-box">
        <router-link to="/account/expend"> 
-       <div class="go-account go-consumption">消费</div>
+       <div class="go-account go-consumption">支出</div>
        </router-link>
        <router-link to="/account/earn"> 
-       <div class="go-account go-earn">入账</div>
+       <div class="go-account go-earn">收入</div>
        </router-link>
     </div> 
   </div> 

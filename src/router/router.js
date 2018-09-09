@@ -11,7 +11,7 @@ import earn from '../views/account/children/earn.vue'
 
   
 var router = new VueRouter({
-  routes:[  //这里是数组 不是对象
+  routes:[  
     {path:'/', redirect:'/home'},
     {path:'/home',component:home},
     {path:'/account',component:account},
